@@ -1,6 +1,49 @@
-﻿Build started...
-1>------ Build started: Project: Classes, Configuration: Debug x64 ------
-1>Classes.cpp
-1>Classes.vcxproj -> C:\Users\gaura\source\repos\Classes\x64\Debug\Classes.exe
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-========== Build started at 12:58 and took 02.101 seconds ==========
+#include<iostream>
+using namespace std;
+
+class flight
+{
+	int flight_no;
+	char distination[25];
+	float distance;
+	float fuel;
+
+	void calculate_fuel()
+	{
+		if (distance > 2000)
+			fuel = 2200;
+		else if (distance > 1000)
+			fuel = 1200;
+		else
+			fuel = 500;
+	}
+public: flight()
+{
+	distance = 500;
+}
+	  void information_entry()
+	  {
+		  cout << "  flight information  boarding from mangaluru airport " << endl;
+		  cout << "--------------------------------------------------------------------------" << endl;
+		  cout << " enter the flight information " << endl;
+		  cin >> flight_no;
+		  cout << " enter the flight distination " << endl;
+		  cin >> distination;
+		  cout << " enter the distance " << endl;
+		  cin >> distance;
+		  calculate_fuel();
+
+	  }
+	  void display()
+	  {
+		  cout << " the flight information is displayed below " << endl;
+		  cout << " ---------------------------------------------------------------------------" << endl;
+		  cout << "the flight number " << flight_no << " going from mangaluru to " << distination << " will cover distance of " << distance << " also it take fuel " << fuel << " litres" << endl;
+	  }
+};
+int main() {
+	flight f1;
+	f1.information_entry();
+	f1.display();
+	return 0;
+}
