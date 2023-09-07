@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: Classes, Configuration: Debug x64 ------
+1>Classes.cpp
+1>Classes.vcxproj -> C:\Users\gaura\source\repos\Classes\x64\Debug\Classes.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build started at 12:58 and took 02.101 seconds ==========
